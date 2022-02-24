@@ -21,7 +21,7 @@
     \begin{tabular}{ll}
         Registration number: & \textcolor{red}{2111046}\\
         Project: & \textcolor{red}{Seq2seq translation}\\
-        Link to GitHub: & \url{https://github.com/JJEEEFFFF/CE888-21a2-Project-proposal-Initial-report:}\\
+        Link to GitHub: & \url{https://github.com/JJEEEFFFF}\\
     \end{tabular}
 \end{table}
 
@@ -86,13 +86,13 @@ Seq2SQL to achieve state-of-the-art results on query generation.
 We use spider dataset. Spider is a collection of questions, corresponding SQL queries, and SQL tables. Spider is the largest hand-annotated semantic parsing dataset to date - it is an order of magnitude larger than other datasets that have logical forms, either in terms of the number of examples or the number of tables. The queries in Spider span over a large number of tables and hence presents an unique challenge: the model must be able to not only generalize to new queries, but to new table schema.
 
 \section{Methodology}
+
 Spider task is to generate a SQL query from a natural language question and table schema.
 Our baseline model is the attentional sequence to sequence neural semantic parser that achieves state-of-the-art performance on a host of semantic parsing datasets
 without using hand-engineered grammar. In particular, we can limit the output space of the generated
 sequence to the union of the table schema, question utterance, and SQL key words. We first describe
 the augmented pointer network model, then address its limitations in our definition of Seq2SQL,
 particularly with respect to generating unordered query conditions.
-
 \clearpage
 
 \begin{figure}[htp]
@@ -102,7 +102,6 @@ particularly with respect to generating unordered query conditions.
 execution is utilized as the reward to train the reinforcement learning algorithm.}
     \label{fig:galaxy}
 \end{figure}
-
 
 \subsection{AUGMENTED POINTER NETWORK}
 The augmented pointer network generates the SQL query token-by-token by selecting from an input
